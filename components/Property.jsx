@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { Flex, Box, Text, Avatar } from "@chakra-ui/react";
+import { Flex, Box, Text } from "@chakra-ui/layout";
+import { Avatar } from "@chakra-ui/avatar";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
@@ -54,7 +55,7 @@ const Property = ({
           </Flex>
 
           <Box>
-            <Avatar size="sm" src={agency?.logo?.url}></Avatar>
+            <Avatar size="sm" src={agency?.logo?.url} />
           </Box>
         </Flex>
 

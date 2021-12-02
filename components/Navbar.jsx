@@ -29,7 +29,7 @@ const Navbar = () => (
         <MenuButton
           as={IconButton}
           icon={<FcMenu />}
-          variant="outlined"
+          variant="outline"
           color="red.400"
         />
 

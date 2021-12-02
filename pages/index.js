@@ -5,7 +5,7 @@ import { Flex, Box, Text, Button } from "@chakra-ui/react";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 import Property from "../components/Property";
 
-const Banner = ({
+export const Banner = ({
   purpose,
   title1,
   title2,
@@ -23,29 +23,35 @@ const Banner = ({
       </Text>
 
       <Text fontSize="3xl" fontWeight="bold">
-        {title1} <br /> {title2}
+        {title1}
+        <br />
+        {title2}
       </Text>
 
-      <Text fontSize="lg" paddingTop="3" color="gray.700">
-        {desc1} <br /> {desc2}
+      <Text fontSize="lg" paddingTop="3" paddingBottom="3" color="gray.700">
+        {desc1}
+        <br />
+        {desc2}
       </Text>
 
-      <Button fontSize="xl">
-        <Link href={linkName}>{buttonText}</Link>
+      <Button fontSize="xl" bg="blue.300" color="white">
+        <Link href={linkName}>
+          <a>{buttonText}</a>
+        </Link>
       </Button>
     </Box>
   </Flex>
 );
 
-const Home = ({ propertiesForSale, propertiesForRent }) => {
+export const Home = ({ propertiesForSale, propertiesForRent }) => {
   return (
     <Box>
       <Banner
         purpose="RENT A HOME"
         title1="Rental Homes for"
         title2="Everyone"
-        desc1="Explore from Apartments, builder floors, Villas"
-        desc2="and more"
+        desc1=" Explore from Apartments, builder floors, Villas"
+        desc2=" villas and more"
         buttonText="Explore Renting"
         linkName="/search?purpose=for-rent"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
@@ -59,10 +65,10 @@ const Home = ({ propertiesForSale, propertiesForRent }) => {
 
       <Banner
         purpose="BUY A HOME"
-        title1="Find, Buy & Own Your"
+        title1=" Find, Buy & Own Your"
         title2="Dream Home"
-        desc1="Explore from Apartments, land, builder Floors"
-        desc2="and more"
+        desc1=" Explore from Apartments, land, builder Floors"
+        desc2=" villas and more"
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
